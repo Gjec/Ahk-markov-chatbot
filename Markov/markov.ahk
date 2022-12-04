@@ -55,7 +55,7 @@ For ka, va in Array
 	}
 }
 if (AryCount == 0){
-Cheese:=0
+Lastword := ""
 break
 	For ka, va in Array
 	{

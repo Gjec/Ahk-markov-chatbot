@@ -1,4 +1,4 @@
-﻿;OPTIMIZATIONS START
+;OPTIMIZATIONS START
 #NoEnv
 Process, Priority, , H
 SetBatchLines, -1
@@ -37,6 +37,9 @@ Loop, Read, ChatData.txt
 	}
 }
 Numpad7::
+
+while 1 == 1 {
+
 AryCount := 0
 Cheese := 0
 Value := 0
@@ -52,6 +55,8 @@ For ka, va in Array
 	}
 }
 if (AryCount == 0){
+Cheese:=0
+break
 	For ka, va in Array
 	{
 		Wago := StrSplit(ka, " ")
@@ -80,6 +85,9 @@ For ks, vs in SubAry
 }
 }
 Cheese := 0
+
+}
+
 return
 
 ~Enter::

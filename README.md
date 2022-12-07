@@ -5,4 +5,4 @@ add quotes, or random sentences from someone into the "ChatData" folder (make su
 
 The notification box popping up just lets you know that you've reached the end of the generated sentence.
 
-if you dont like a generated sentence, just delete what it wrote, and press enter to reset it.
+if you dont like a generated sentence, just delete what it wrote.

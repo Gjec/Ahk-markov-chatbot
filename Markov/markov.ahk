@@ -18,6 +18,7 @@ SetWorkingDir %A_ScriptDir%
 Array := []
 AbsVal := 0
 Lastword := ""
+Wabbit := ""
 Loop, Read, ChatData.txt
 {
 	LineWords := StrSplit(A_LoopReadLine, " ")
@@ -56,16 +57,9 @@ For ka, va in Array
 }
 if (AryCount == 0){
 Lastword := ""
+sendraw, %Wabbit% 
+Wabbit := ""
 break
-	For ka, va in Array
-	{
-		Wago := StrSplit(ka, " ")
-		Ag := Wago[2]
-		SubAry[Ag] := va
-		Value := Value + 1
-		AryCount := AryCount + 1
-	}
-msgbox, lastword was: %Lastword%
 }
 
 while Cheese == 0 {
@@ -74,8 +68,7 @@ For ks, vs in SubAry
 		vs := ((Value/100)*vs)
 	Random, Addword, vs, Value
 	if (Addword > Value/(((vs/AryCount))+1)){
-		Wabbit := ks . " "
-		sendraw, %Wabbit% 
+		Wabbit := Wabbit . ks . " "
 		Cheese := 1
 		Lastword := ks
 		Apap := []

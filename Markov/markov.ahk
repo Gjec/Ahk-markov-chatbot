@@ -66,7 +66,7 @@ break
 while Cheese == 0 {
 For ks, vs in SubAry
 {	
-	Angus := Value-((Value/100)*vs)
+
 	Random, Addword, vs, Value +0.0
 	if (Addword > Value-((Value/100)*vs)){
 		Wabbit := Wabbit . ks . " "

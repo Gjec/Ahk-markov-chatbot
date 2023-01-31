@@ -16,7 +16,6 @@ SetDefaultMouseSpeed, 0
 
 SetWorkingDir %A_ScriptDir%
 Array := []
-AbsVal := 0
 Lastword := ""
 Wabbit := ""
 
@@ -35,18 +34,18 @@ Loop, Read, ChatData.txt
 				Array[Prevword . " " . v] := Array[Prevword . " " . v] + 1
 			}
 		}
-	AbsVal := AbsVal + 1
 	Prevword := v
 	}
 }
 Numpad7::
 
-while 1 == 1 {
+while 1==1 {
 
 AryCount := 0
 Cheese := 0
 Value := 0
 SubAry := []
+
 For ka, va in Array
 {
 	Wago := StrSplit(ka, " ")
@@ -67,9 +66,9 @@ break
 while Cheese == 0 {
 For ks, vs in SubAry
 {	
-		vs := ((Value/100)*vs)
-	Random, Addword, vs, Value
-	if (Addword > Value/(((vs/AryCount))+1)){
+	Angus := Value-((Value/100)*vs)
+	Random, Addword, vs, Value +0.0
+	if (Addword > Value-((Value/100)*vs)){
 		Wabbit := Wabbit . ks . " "
 		Cheese := 1
 		Lastword := ks
@@ -83,10 +82,6 @@ Cheese := 0
 
 }
 
-return
-
-~Enter::
-Lastword := ""
 return
 
 Numpad4::

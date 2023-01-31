@@ -19,6 +19,8 @@ Array := []
 AbsVal := 0
 Lastword := ""
 Wabbit := ""
+
+
 Loop, Read, ChatData.txt
 {
 	LineWords := StrSplit(A_LoopReadLine, " ")
@@ -85,4 +87,11 @@ return
 
 ~Enter::
 Lastword := ""
+return
+
+Numpad4::
+InputBox, Sentencestarter , Custom sentence starter, enter a word
+if !ErrorLevel
+Lastword := Sentencestarter
+Wabbit := Wabbit . Sentencestarter . " "
 return

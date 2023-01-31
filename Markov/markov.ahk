@@ -90,7 +90,7 @@ Lastword := ""
 return
 
 Numpad4::
-InputBox, Sentencestarter , Custom sentence starter, enter a word
+InputBox, Sentencestarter , Custom sentence starter, enter a word,,250,100
 if !ErrorLevel
 Lastword := Sentencestarter
 Wabbit := Wabbit . Sentencestarter . " "

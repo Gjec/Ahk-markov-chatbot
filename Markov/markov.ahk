@@ -50,7 +50,7 @@ For ka, va in Array
 {
 	Wago := StrSplit(ka, " ")
 	Ag := Wago[2]
-	if (Wago[1] == Lastword && Wago[1] != Wago[2]){
+	if (Wago[1] = Lastword){
 		SubAry[Ag] := va
 		Value := Value + va
 		AryCount := AryCount + 1
